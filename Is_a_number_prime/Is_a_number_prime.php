@@ -8,7 +8,8 @@ function is_prime(int $n): bool {
 
     if($n % 2 == 0)
         return false;
-    for($i = 3; $i * $i <= $n;$i+ 2)
+    $limit = sqrt($n);
+    for($i = 3; $i <= $limit;$i++)
     {
         if($n % $i == 0)
             return false;
